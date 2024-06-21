@@ -243,6 +243,7 @@ class TestManageJoin(unittest.TestCase):
         self.driver.find_element(By.CSS_SELECTOR, ".button-text").click()
         self.driver.find_element(By.CSS_SELECTOR, ".nav-menu-item:nth-child(3)").click()
         self.driver.find_element(By.CSS_SELECTOR, ".el-card:nth-child(1) .contentContainer").click()
+        time.sleep(2)
         self.driver.find_element(By.CSS_SELECTOR, ".all_button").click()
         element = self.driver.find_element(By.CSS_SELECTOR, ".all_button")
         actions = ActionChains(self.driver)
@@ -283,7 +284,7 @@ class TestPostPost(unittest.TestCase):
         self.driver.find_element(By.XPATH, "//div[@id=\'app\']/div/main/div[2]/div/div[3]/div[2]/div/div/input").click()
         self.driver.find_element(By.XPATH,
                                  "//div[@id=\'app\']/div/main/div[2]/div/div[3]/div[2]/div/div/input").send_keys("111")
-        time.sleep(2)
+        time.sleep(4)
         self.driver.switch_to.frame(0)
         self.driver.find_element(By.CSS_SELECTOR, "p").click()
         element = self.driver.find_element(By.ID, "tinymce")
